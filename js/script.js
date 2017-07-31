@@ -34,11 +34,11 @@ function findVariety() {
 
 //caculating ang displaying latest price function
 function showPrice(){
-    var stelajQuantity = parseInt(id_s('stelaj_quantity').value);
-    var legHeight = parseInt(id_s('sh_leg_height').value)
-    var h = parseInt(findPrice(cl_s('height_item')).value);
-    var sh_v = findVariety();
-    console.log(legHeight, h, sh_v);
+    let stelajQuantity = parseInt(id_s('stelaj_quantity').value);
+    let legHeight = parseInt(id_s('sh_leg_height').value)
+    let h = parseInt(findPrice(cl_s('height_item')).value);
+    let sh_v = findVariety();
+   // console.log(legHeight, h, sh_v);
     
     if(stelajQuantity === 1){
         alert(h+sh_v+(legHeight*2))
