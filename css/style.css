@@ -1,13 +1,21 @@
-body{
-    width: 500px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    background: #ccc;
-    border: 1px solid black;
+.calc-first-col select, .calc-first-col input {float: right}
+.calc-first-col {
     padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #ccc;
 }
-body select, body input{
-    float: right
+.calc-row {
+    margin: 10px 0;
+}
+.calc-row select, .calc-row input{
+    font-size: 15px
+}
+.calc-row label{
+    font-size: 15px;
+    margin: 0;
+    padding: 7px;
+}
+button#getPrice {
+    margin-right: 10px;
+    display: inline-block;
 }

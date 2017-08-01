@@ -3,71 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <title>Hello calc</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/sweetalert.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    Ширина
-    <select name="" id="sh_width">
-        <option class="width_item" value="600">600</option>
-        <option class="width_item" value="750">750</option>
-        <option class="width_item" value="950">950</option>
-        <option class="width_item" value="1200">1200</option>
-    </select>
-    <br>
-    <br>
-    Высота
-    <select name="" id="sh_height">
-        <option class="height_item" value="965">1900</option>
-        <option class="height_item" value="1070">2100</option>
-        <option class="height_item" value="1120">2350</option>
-    </select>
-    <br>
-    <br>
-    Количество полок
-    <select name="" id="sh_sehv_quantity">
-        <option class="sehv_quantity" value="4">4</option>
-        <option class="sehv_quantity" value="5">5</option>
-    </select>
-    <br>
-    <br>
-    <input name="Высота ноги" disabled type="hidden" value="356" id="sh_leg_height">    
+  <div class="col-sm-6 col-sm-offset-3 calc-first-col">
+  
+  <div class="calc-row clearfix">
+   <label for="sh_width" class="control-label col-sm-6 ">Ширина</label>
+    <div class="col-sm-6">
+       <select class="form-control" name="" id="sh_width">
+            <option class="width_item" value="600">600</option>
+            <option class="width_item" value="750">750</option>
+            <option class="width_item" value="950">950</option>
+            <option class="width_item" value="1200">1200</option>
+       </select>
+    </div>
+   </div>
+   
+   <div class="calc-row clearfix">
+    <label for="sh_height" class="control-label col-sm-6">Высота</label>
+    <div class="col-sm-6">
+        <select name="" class="form-control" id="sh_height">
+            <option class="height_item" value="965">1900</option>
+            <option class="height_item" value="1070">2100</option>
+            <option class="height_item" value="1120">2350</option>
+        </select>
+    </div>
+      </div>
+   <div class="calc-row clearfix">
+    <label for="sh_sehv_quantity" class="control-label col-sm-6">Количество полок</label>
+    <div class="col-sm-6">
+        <select name="" class="form-control" id="sh_sehv_quantity">
+            <option class="sehv_quantity" value="4">4</option>
+            <option class="sehv_quantity" value="5">5</option>
+        </select>
+    </div>
+      </div>  
+      
+    <input name="Высота ноги" disabled="" type="hidden" value="356" id="sh_leg_height">
+    <div class="calc-row clearfix">    
     <span>
-      Варианты глубины полок:
-       <select id="sh_shelv_variety1" data-calc="on">
-           <option class="4shelv" value="726"> 300 *2 шт/ 400 *2 шт</option>
-           <option class="4shelv" value="693"> 300 *3 шт/ 400 *1 шт</option>
-           <option class="4shelv" value="759"> 300 *1 шт/ 400 *3 шт</option>
-           <option class="4shelv" value="660"> 300 *4 шт</option>
-           <option class="4shelv" value="792"> 400 *4 шт</option>
-       </select>
+      <label for="sh_shelv_variety1 sh_shelv_variety2" class="control-label col-sm-6">Варианты глубины полок:</label>
+      <div class="col-sm-6">
+           <select id="sh_shelv_variety1" class="form-control" data-calc="on">
+               <option class="4shelv" value="726"> 300 *2 шт/ 400 *2 шт</option>
+               <option class="4shelv" value="693"> 300 *3 шт/ 400 *1 шт</option>
+               <option class="4shelv" value="759"> 300 *1 шт/ 400 *3 шт</option>
+               <option class="4shelv" value="660"> 300 *4 шт</option>
+               <option class="4shelv" value="792"> 400 *4 шт</option>
+           </select>
    
-       <select id="sh_shelv_variety2" data-calc="off" style="display: none" >
-           <option class="5shelv" value="396"> 300 *3 шт/ 400 *2 шт</option>
-           <option class="5shelv" value="858"> 300 *4 шт/ 400 *1 шт</option>
-           <option class="5shelv" value="924"> 300 *2 шт/ 400 *3 шт</option>
-           <option class="5shelv" value="957"> 300 *1 шт/ 400 *4 шт</option>
-           <option class="5shelv" value="825"> 300 *5 шт</option>
-           <option class="5shelv" value="990"> 400 *5 шт</option>
-       </select>
+           <select id="sh_shelv_variety2" class="form-control" data-calc="off" style="display: none">
+               <option class="5shelv" value="396"> 300 *3 шт/ 400 *2 шт</option>
+               <option class="5shelv" value="858"> 300 *4 шт/ 400 *1 шт</option>
+               <option class="5shelv" value="924"> 300 *2 шт/ 400 *3 шт</option>
+               <option class="5shelv" value="957"> 300 *1 шт/ 400 *4 шт</option>
+               <option class="5shelv" value="825"> 300 *5 шт</option>
+               <option class="5shelv" value="990"> 400 *5 шт</option>
+           </select>
+       </div>
    </span>
-   <br>
-   <br>
+      </div>
+  <div class="calc-row clearfix">
    <span>
-       Количество стеллажей:
-       <input type="number" id="stelaj_quantity" value="1" min="1">
+       <label for="stelaj_quantity" class="control-label col-sm-6">Количество стеллажей:</label>
+       <div class="col-sm-6">
+           <input type="number" class="form-control" id="stelaj_quantity" value="1" min="1">
+       </div>
    </span>
-   <br>
-   <br>
-    <button id="getPrice">Узнать цену</button>
+      </div>
+      
+      
+    <button id="getPrice" class="btn btn-default pull-right">Узнать цену</button>
     <div id="price"></div>
-    
-    
+</div>
 
-   
-
-   
-   
+   <script src="js/sweetalert.min.js"></script>
     <script src="js/changePrice.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/changePriceFunctions.js"></script>
 </body>
 </html>

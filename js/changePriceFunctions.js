@@ -41,10 +41,15 @@ function showPrice(){
    // console.log(legHeight, h, sh_v);
     
     if(stelajQuantity === 1){
-        alert(h+sh_v+(legHeight*2))
+        swal( h+sh_v+legHeight + " грн", "Цена за стеллаж")
+        //alert(h+sh_v+(legHeight*2))
     } else if (stelajQuantity > 1){
-        alert(((h+sh_v+legHeight)*stelajQuantity+legHeight))
-    } else(alert('Введите точное количество стеллажей'))
+        swal( ((h+sh_v)*stelajQuantity+legHeight) + " грн", "Цена за стеллаж")
+       // alert(((h+sh_v+legHeight)*stelajQuantity+legHeight))
+    } else {
+        sweetAlert("Введите точное количество стеллажей", "", "error");
+        //alert('Введите точное количество стеллажей')
+    }
     
     //console.log(stelajQuantity)
     
